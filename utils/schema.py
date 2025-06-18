@@ -21,3 +21,18 @@
   "id": "KE001"
 }
 
+def validate_question(q: dict) -> bool:
+    required_fields = [
+        "question_text", "topic", "difficulty", "spec_links", "variables",
+        "latex_equation", "mcq", "hint", "explanation", "id"
+    ]
+    for field in required_fields:
+        if field not in q:
+            print(f"Missing: {field}")
+            return False
+    mcq_fields = ["question", "choices", "correct"]
+    for field in mcq_fields:
+        if field not in q["mcq"]:
+            print(f"Missing MCQ field: {field}")
+            return False
+    return True
