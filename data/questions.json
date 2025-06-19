@@ -151,5 +151,447 @@
     "correct": "Large C, large V",
     "explanation": "Energy ∝ C × V² → maximise both for more energy."
   }
-}
+},
+  {
+    "id": "capacitor_e001",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "What is the definition of capacitance?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "The charge stored per unit potential difference, measured in farads.",
+    "hint": "Think of Q = CV.",
+    "explanation": "Capacitance (C) = charge (Q) divided by voltage (V).",
+    "mcq": {
+      "question": "Which formula defines capacitance?",
+      "options": ["C = Q/V", "Q = CV", "V = Q/C", "All of the above"],
+      "correct": "All of the above",
+      "explanation": "All three are equivalent rearrangements of the same formula."
+    }
+  },
+  {
+    "id": "capacitor_e002",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "What is the capacitance of a capacitor that stores 6 C of charge at 3 V?",
+    "latex_eq": "C = Q/V",
+    "variables": {},
+    "answer": "2 F",
+    "hint": "Use C = Q/V = 6/3.",
+    "explanation": "Substituting directly gives 2 farads.",
+    "mcq": {
+      "question": "What is the capacitance if Q = 6 C and V = 3 V?",
+      "options": ["0.5 F", "1 F", "2 F", "18 F"],
+      "correct": "2 F",
+      "explanation": "Capacitance = 6÷3 = 2 F."
+    }
+  },
+  {
+    "id": "capacitor_e003",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "Which unit represents capacitance?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "Farad (F).",
+    "hint": "One farad stores one coulomb per volt.",
+    "explanation": "By definition Q = CV ⇒ C has units of C/V, called farad.",
+    "mcq": {
+      "question": "Which of these is the unit for capacitance?",
+      "options": ["Coulomb", "Volt", "Farad", "Ohm"],
+      "correct": "Farad",
+      "explanation": "Capacitance is measured in farads (F)."
+    }
+  },
+  {
+    "id": "capacitor_e004",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "True or false: Increasing plate area increases capacitance.",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "True.",
+    "hint": "C ∝ A/d.",
+    "explanation": "Capacitance is directly proportional to plate area.",
+    "mcq": {
+      "question": "If plate area increases, capacitance:",
+      "options": ["Increases", "Decreases", "Stays same", "Becomes zero"],
+      "correct": "Increases",
+      "explanation": "Bigger plates store more charge: C ∝ area."
+    }
+  },
+  {
+    "id": "capacitor_e005",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "Does increasing plate separation increase or decrease capacitance?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "Decrease.",
+    "hint": "C ∝ 1/d.",
+    "explanation": "Larger distance reduces electric field strength, reducing capacitance.",
+    "mcq": {
+      "question": "Increasing plate separation results in:",
+      "options": ["More capacitance", "Less capacitance", "No change", "Infinite capacitance"],
+      "correct": "Less capacitance",
+      "explanation": "Capacitance is inversely proportional to separation."
+    }
+  },
+  {
+    "id": "capacitor_e006",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "A capacitor stores 12 C at 4 V. What is its capacitance?",
+    "latex_eq": "C = Q/V",
+    "variables": {},
+    "answer": "3 F",
+    "hint": "12 ÷ 4 = 3.",
+    "explanation": "Simple application of C = Q/V.",
+    "mcq": {
+      "question": "Capacitance = 12 C ÷ 4 V = ?",
+      "options": ["2 F", "3 F", "4 F", "6 F"],
+      "correct": "3 F",
+      "explanation": "12 ÷ 4 gives 3 farads."
+    }
+  },
+  {
+    "id": "capacitor_e007",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "Which quantity is stored in a capacitor?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "Electric charge and energy.",
+    "hint": "Think Q and energy.",
+    "explanation": "Capacitor stores charge, and hence energy in the electric field.",
+    "mcq": {
+      "question": "Capacitors store energy in the form of:",
+      "options": ["Kinetic energy", "Chemical energy", "Electric field energy", "Nuclear energy"],
+      "correct": "Electric field energy",
+      "explanation": "Energy is stored in the electric field between plates."
+    }
+  },
+  {
+    "id": "capacitor_e008",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "True or false: A capacitor blocks direct current (DC) after fully charged.",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "True.",
+    "hint": "Steady state after charge complete.",
+    "explanation": "Once charged, no further DC flows across plates.",
+    "mcq": {
+      "question": "A fully charged capacitor in a DC circuit:",
+      "options": ["Allows current", "Blocks current", "Short-circuits", "Oscillates"],
+      "correct": "Blocks current",
+      "explanation": "No continuous DC path through the dielectric."
+    }
+  },
+  {
+    "id": "capacitor_e009",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "A 2 μF capacitor is charged to 5 V. How much charge does it store?",
+    "latex_eq": "Q = CV",
+    "variables": {},
+    "answer": "10 × 10⁻⁶ C",
+    "hint": "2×10⁻⁶ × 5 = 10×10⁻⁶ C.",
+    "explanation": "Use Q = CV, converting microfarad correctly.",
+    "mcq": {
+      "question": "Charge stored = 2 μF × 5 V = ?",
+      "options": ["2 μC", "10 μC", "20 μC", "0.4 μC"],
+      "correct": "10 μC",
+      "explanation": "2×5 = 10, with μF gives μC."
+    }
+  },
+  {
+    "id": "capacitor_e010",
+    "topic": "Capacitance",
+    "difficulty": "Easy",
+    "question_template": "If voltage across a capacitor doubles, what happens to the stored charge?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "Doubles.",
+    "hint": "Q = CV.",
+    "explanation": "Since C is constant, Q ∝ V.",
+    "mcq": {
+      "question": "Doubling V across fixed capacitor leads to:",
+      "options": ["Charge halved", "Charge unchanged", "Charge doubles", "Charge quadruples"],
+      "correct": "Charge doubles",
+      "explanation": "Direct proportionality of charge and voltage."
+    }
+  },
+  {
+    "id": "capacitor_m001",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "How much energy is stored in a 5 μF capacitor charged to 8 V?",
+    "latex_eq": "E = 1/2 C V^2",
+    "variables": {},
+    "answer": "0.00016 J",
+    "hint": "Convert μF to F, then apply formula.",
+    "explanation": "5×10⁻⁶×64=0.00032, halved = 0.00016 J.",
+    "mcq": {
+      "question": "Energy stored in 5 μF at 8 V is:",
+      "options": ["0.00008 J", "0.00016 J", "0.0016 J", "0.016 J"],
+      "correct": "0.00016 J",
+      "explanation": "E=½×5e‑6×8²."
+    }
+  },
+  {
+    "id": "capacitor_m002",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "Two 3 μF capacitors are connected in series. What is their combined capacitance?",
+    "latex_eq": "1/C = 1/C1 + 1/C2",
+    "variables": {},
+    "answer": "1.5 μF",
+    "hint": "Series formula halves identical caps.",
+    "explanation": "For two equal caps in series: C_total = C/2 = 1.5 μF.",
+    "mcq": {
+      "question": "Series combo of two equal capacitors gives:",
+      "options": ["1.5 μF", "3 μF", "6 μF", "9 μF"],
+      "correct": "1.5 μF",
+      "explanation": "Equal caps halve the capacitance."
+    }
+  },
+  {
+    "id": "capacitor_m003",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "A 10 μF capacitor is connected across a 12 V battery. What charge flows onto it?",
+    "latex_eq": "Q = CV",
+    "variables": {},
+    "answer": "120 μC",
+    "hint": "10×10⁻⁶ × 12 = 120×10⁻⁶ C.",
+    "explanation": "Simple multiplication in microfarads.",
+    "mcq": {
+      "question": "Charge stored = 10×10⁻⁶ F × 12 V = ?",
+      "options": ["120 μC", "12 μC", "1.2 mC", "24 μC"],
+      "correct": "120 μC",
+      "explanation": "10×12 = 120, microfarad gives microcoulomb."
+    }
+  },
+  {
+    "id": "capacitor_m004",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "What is the effect on stored energy if the voltage across a capacitor is doubled?",
+    "latex_eq": "E = 1/2 C V^2",
+    "variables": {},
+    "answer": "Energy quadruples.",
+    "hint": "Energy depends on V squared.",
+    "explanation": "If V doubles, V² becomes 4×; therefore energy quadruples.",
+    "mcq": {
+      "question": "Doubling V across capacitor changes energy by:",
+      "options": ["Δ = ×2", "Δ = ×4", "Δ = √2", "Δ = ×8"],
+      "correct": "Δ = ×4",
+      "explanation": "Square relationship doubles squared."
+    }
+  },
+  {
+    "id": "capacitor_m005",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "Three capacitors (2 μF, 3 μF, 6 μF) are in parallel. What is total capacitance?",
+    "latex_eq": "C_{total} = C1 + C2 + C3",
+    "variables": {},
+    "answer": "11 μF",
+    "hint": "Sum all in parallel.",
+    "explanation": "2+3+6 = 11 μF.",
+    "mcq": {
+      "question": "Total capacitance in parallel is:",
+      "options": ["11 μF", "36 μF", "1.1 μF", "0.11 μF"],
+      "correct": "11 μF",
+      "explanation": "Parallel adds capacitances directly."
+    }
+  },
+  {
+    "id": "capacitor_m006",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "A 2 μF and 4 μF capacitor are connected in series. What is the total capacitance?",
+    "latex_eq": "1/C = 1/C1 + 1/C2",
+    "variables": {},
+    "answer": "1.333 μF",
+    "hint": "Compute reciprocal sum.",
+    "explanation": "1/2 + 1/4 = 0.5+0.25=0.75 → 1/0.75 =1.333 μF.",
+    "mcq": {
+      "question": "Series combo of 2 µF and 4 µF is:",
+      "options": ["1.333 μF", "2.67 μF", "6 μF", "4 μF"],
+      "correct": "1.333 μF",
+      "explanation": "Use reciprocal formula."
+    }
+  },
+  {
+    "id": "capacitor_m007",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "Calculate energy in capacitor: 3 μF at 10 V.",
+    "latex_eq": "E = 1/2 C V^2",
+    "variables": {},
+    "answer": "0.00015 J",
+    "hint": "3×10⁻⁶ ×100 ÷2.",
+    "explanation": "3e-6×100=0.0003, /2=0.00015 J.",
+    "mcq": {
+      "question": "Energy stored in 3 μF at 10 V?",
+      "options": ["0.000075 J", "0.00015 J", "0.0003 J", "0.0015 J"],
+      "correct": "0.00015 J",
+      "explanation": "Half C V² with correct units."
+    }
+  },
+  {
+    "id": "capacitor_m008",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "If three equal capacitors in series have total capacitance X, what is X relative to each individual capacitor?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "X = C/3",
+    "hint": "Series reduces capacitance.",
+    "explanation": "Three equal caps: 1/X = 1/C +1/C +1/C → X = C/3.",
+    "mcq": {
+      "question": "Three identical capacitors in series gives total:",
+      "options": ["Equal to each", "Three times each", "One-third each", "Infinite"],
+      "correct": "One-third each",
+      "explanation": "Series formula divides by number of identical caps."
+    }
+  },
+  {
+    "id": "capacitor_m009",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "A 100 μF capacitor loses charge until voltage drops from 10 V to 8 V. How much charge is removed?",
+    "latex_eq": "Q = C(V1 - V2)",
+    "variables": {},
+    "answer": "200 μC",
+    "hint": "Check drop × capacitance.",
+    "explanation": "ΔQ = 100e-6×(10-8)=200e-6 C.",
+    "mcq": {
+      "question": "Charge lost = 100 μF × 2 V = ?",
+      "options": ["200 μC", "20 μC", "2 mC", "500 μC"],
+      "correct": "200 μC",
+      "explanation": "Multiply C by voltage change with μ."
+    }
+  },
+  {
+    "id": "capacitor_m010",
+    "topic": "Capacitance",
+    "difficulty": "Medium",
+    "question_template": "True or false: Adding a dielectric increases capacitance at same voltage.",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "True.",
+    "hint": "Dielectric reduces electric field.",
+    "explanation": "Dielectric increases permittivity, raising capacitance.",
+    "mcq": {
+      "question": "Dielectric in capacitor leads to:",
+      "options": ["Lower capacitance", "No change", "Higher capacitance", "Voltage reversal"],
+      "correct": "Higher capacitance",
+      "explanation": "It increases C by reducing effective field."
+    }
+  },
+  {
+    "id": "capacitor_h001",
+    "topic": "Capacitance",
+    "difficulty": "Hard",
+    "question_template": "A 50 μF capacitor is connected in parallel with another of unknown capacitance. Equivalent capacitance is 80 μF. What is the unknown capacitance?",
+    "latex_eq": "C_total = C1 + C2",
+    "variables": {},
+    "answer": "30 μF",
+    "hint": "Subtract known from total.",
+    "explanation": "80 − 50 = 30 μF.",
+    "mcq": {
+      "question": "Unknown cap is:",
+      "options": ["25 μF", "30 μF", "50 μF", "80 μF"],
+      "correct": "30 μF",
+      "explanation": "Equivalents in parallel add directly."
+    }
+  },
+  {
+    "id": "capacitor_h002",
+    "topic": "Capacitance",
+    "difficulty": "Hard",
+    "question_template": "A 10 μF capacitor has initial charge 100 μC. It is disconnected and connected to an identical uncharged capacitor. What is final equivalent charge on each?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "50 μC on each",
+    "hint": "Charge is shared equally.",
+    "explanation": "Total charge 100 μC splits equally between two equal capacitors.",
+    "mcq": {
+      "question": "Final charge per capacitor:",
+      "options": ["0 μC", "25 μC", "50 μC", "100 μC"],
+      "correct": "50 μC",
+      "explanation": "Conservation of charge in equal capacitors."
+    }
+  },
+  {
+    "id": "capacitor_h003",
+    "topic": "Capacitance",
+    "difficulty": "Hard",
+    "question_template": "Calculate the time constant of an RC circuit with R = 10 kΩ and C = 2 μF.",
+    "latex_eq": "τ = RC",
+    "variables": {},
+    "answer": "0.02 s",
+    "hint": "Multiply 10,000 × 2e-6.",
+    "explanation": "τ = 10,000 × 2×10⁻⁶ = 0.02 seconds.",
+    "mcq": {
+      "question": "Time constant is:",
+      "options": ["0.002 s", "0.02 s", "0.2 s", "2 s"],
+      "correct": "0.02 s",
+      "explanation": "τ = R × C = 20 ms."
+    }
+  },
+  {
+    "id": "capacitor_h004",
+    "topic": "Capacitance",
+    "difficulty": "Hard",
+    "question_template": "Find the energy lost when the two identical capacitors from h002 are connected (initial 100 μC and combined voltage halved).",
+    "latex_eq": "E = 1/2 C V^2",
+    "variables": {},
+    "answer": "0.00015 J",
+    "hint": "Energy lost = difference in energy before and after.",
+    "explanation": "Initial energy = 0.5×10e‑6×(10)^2=0.0005J; final energy total = two caps each at 5V: 2×0.5×10e‑6×25=0.00025J; loss = 0.00025J.",
+    "mcq": {
+      "question": "Energy lost equals:",
+      "options": ["0.0001 J", "0.00015 J", "0.00025 J", "0.0005 J"],
+      "correct": "0.00025 J",
+      "explanation": "Energy difference is 0.0005 − 0.00025 = 0.00025 J."
+    }
+  },
+  {
+    "id": "capacitor_h005",
+    "topic": "Capacitance",
+    "difficulty": "Hard",
+    "question_template": "An RC circuit with R = 5 kΩ, C = 1 μF is charging from 0 to 5 V. How long until voltage reaches 63% of 5 V?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "0.005 s",
+    "hint": "63% is one time constant τ = RC.",
+    "explanation": "RC = 5000 × 1e‑6 = 0.005 s.",
+    "mcq": {
+      "question": "63% charge time is:",
+      "options": ["0.0005 s", "0.005 s", "0.05 s", "0.5 s"],
+      "correct": "0.005 s",
+      "explanation": "Time constant = product of R and C."
+    }
+  },
+  {
+    "id": "capacitor_h006",
+    "topic": "Capacitance",
+    "difficulty": "Hard",
+    "question_template": "Calculate the effective capacitance between the two junctions of a bridge circuit of four 4 μF capacitors forming a square with a diagonal link between opposite corners (no applied voltage across diagonal).",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "4/3 μF",
+    "hint": "Symmetry and series/parallel combos.",
+    "explanation": "Two branches series‑parallel give equivalent = 4/3 μF.",
+    "mcq": {
+      "question": "Capacitance is:",
+      "options": ["1.33 μF", "2 μF", "4 μF", "5.33 μF"],
+      "correct": "1.33 μF",
+      "explanation": "Solution uses symmetry and network reduction."
+    }
+  }
 ]
