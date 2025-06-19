@@ -102,19 +102,9 @@ else:
                 worksheet_text += f"{chr(65 + j)}. {opt}\n"
             worksheet_text += f"Explanation: {mcq['explanation']}\n\n"
 
-    # pdf_file = generate_pdf(worksheet_text)
+# generate pdf
 
-# if st.button("Download PDF (PyLaTeX)"):
-#     with st.spinner("Generating PDF..."):
-#         pdf_file = build_pdf(final_sample)
-#     st.download_button(
-#         label="Download PDF",
-#         data=pdf_file,
-#         file_name="worksheet.pdf",
-#         mime="application/pdf"
-#     )
-
-if st.button("Download PDF (ReportLab)"):
+if st.button("Generate PDF (ReportLab)"):
     with st.spinner("Generating PDF..."):
         pdf_bytes = build_pdf_reportlab(final_sample)  # replace sample with your question list
 
