@@ -38,3 +38,17 @@ def build_latex_content(questions):
         entries.append(block)
 
     return "\n\n".join(entries)
+
+def compile_pdf_from_latex(template_path, latex_content):
+    with open(template_path, "r") as f:
+        template = f.read()
+
+    filled = template.replace("%__QUESTIONS__", latex_content)
+
+    with open("worksheet.tex", "w") as f:
+        f.write(filled)
+
+    subprocess.run(["pdflatex", "-interaction=nonstopmode", "worksheet.tex"], check=True)
+
+    with open("worksheet.pdf", "rb") as f:
+        return BytesIO(f.read())
