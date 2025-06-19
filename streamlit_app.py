@@ -116,7 +116,7 @@ else:
 
 if st.button("Download PDF (ReportLab)"):
     with st.spinner("Generating PDF..."):
-        pdf_bytes = build_pdf_reportlab(sample)  # replace sample with your question list
+        pdf_bytes = build_pdf_reportlab(final_sample)  # replace sample with your question list
 
     st.download_button(
         label="Download PDF",
