@@ -5,7 +5,6 @@ from utils.worksheet_builder import build_question_instance, get_linked_mcq
 from io import BytesIO
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
-from utils.latex_utils import build_latex_content, compile_pdf_from_latex
 from utils.latex_utils import build_pdf
 
 def generate_pdf(worksheet_text):
