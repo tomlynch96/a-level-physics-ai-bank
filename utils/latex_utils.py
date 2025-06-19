@@ -72,7 +72,7 @@ def build_pdf_reportlab(questions):
     story = []
 
     # Title
-    story.append(Paragraph("A Level Physics Worksheet", title_style))
+    story.append(Paragraph(title, title_style))
 
     # Section heading
     story.append(Paragraph("Questions", section_style))
