@@ -309,22 +309,6 @@ def build_pdf_reportlab(questions):
         # Question text with number
         story.append(Paragraph(f"<b>Q{i}:</b> {question_text}", question_style))
 
-        # LaTeX formula as monospaced text (or image placeholder)
-        if latex_eq:
-            story.append(
-                Paragraph(
-                    f"<font face='Courier'>Equation: {latex_eq}</font>", question_style
-                )
-            )
-
-        # Hint (italic grey text, indented)
-        if hint:
-            story.append(Paragraph(f"Hint: {hint}", hint_style))
-
-        # Explanation (normal text, indented)
-        if explanation:
-            story.append(Paragraph(f"Explanation: {explanation}", explanation_style))
-
         # Page break every 5 questions (optional)
         if i % 5 == 0:
             story.append(PageBreak())
