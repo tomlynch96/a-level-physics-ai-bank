@@ -71,6 +71,25 @@ import streamlit as st
 import json
 import random
 from utils.worksheet_builder import build_question_instance, get_linked_mcq
+from io import BytesIO
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+
+def generate_pdf(worksheet_text):
+    buffer = BytesIO()
+    c = canvas.Canvas(buffer, pagesize=A4)
+    width, height = A4
+    y = height - 50
+    for line in worksheet_text.split('\n'):
+        c.drawString(40, y, line)
+        y -= 15
+        if y < 50:
+            c.showPage()
+            y = height - 50
+    c.save()
+    buffer.seek(0)
+    return buffer
+
 
 # Load question bank
 with open("data/questions.json") as f:
@@ -151,11 +170,14 @@ else:
                 worksheet_text += f"{chr(65 + j)}. {opt}\n"
             worksheet_text += f"Explanation: {mcq['explanation']}\n\n"
 
-    st.download_button(
-        label="Download Worksheet as Text",
-        data=worksheet_text,
-        file_name="worksheet.txt",
-        mime="text/plain"
-    )
+    pdf_file = generate_pdf(worksheet_text)
+
+st.download_button(
+    label="Download Worksheet as PDF",
+    data=pdf_file,
+    file_name="worksheet.pdf",
+    mime="application/pdf"
+)
+
 
 
