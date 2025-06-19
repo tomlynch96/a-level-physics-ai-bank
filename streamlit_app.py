@@ -104,7 +104,7 @@ else:
 
 # generate pdf
 
-if st.button("Generate PDF (ReportLab)"):
+if st.button("Generate PDF"):
     with st.spinner("Generating PDF..."):
         pdf_bytes = build_pdf_reportlab(final_sample)  # replace sample with your question list
 
