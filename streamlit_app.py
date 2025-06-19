@@ -103,16 +103,20 @@ else:
             worksheet_text += f"Explanation: {mcq['explanation']}\n\n"
 
 # generate pdf
+filename = st.text_input("Enter filename for your worksheet", value="worksheet")
 
 if st.button("Generate PDF"):
     with st.spinner("Generating PDF..."):
-        pdf_bytes = build_pdf_reportlab(final_sample)  # replace sample with your question list
+        pdf_bytes = build_pdf_reportlab(final_sample)  # your questions list
+    
+    # Ensure filename ends with .pdf
+    if not filename.lower().endswith(".pdf"):
+        filename += ".pdf"
 
     st.download_button(
         label="Download PDF",
         data=pdf_bytes,
-        file_name="worksheet.pdf",
+        file_name=filename,
         mime="application/pdf"
     )
-
 
