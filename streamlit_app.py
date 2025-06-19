@@ -36,16 +36,12 @@ else:
         if worksheet_type in ["Free Response", "Both"]:
             st.markdown(f"### Q{i+1}: Free Response")
             st.markdown(instance["question_text"])
-            if instance["latex_eq"]:
-                st.latex(instance["latex_eq"])
             with st.expander("Hint"):
                 st.markdown(instance["hint"])
             with st.expander("Explanation"):
                 st.markdown(instance["explanation"])
 
             worksheet_text += f"Q{i+1}: {instance['question_text']}\n"
-            if instance["latex_eq"]:
-                worksheet_text += f"LaTeX: {instance['latex_eq']}\n"
             worksheet_text += f"Hint: {instance['hint']}\n"
             worksheet_text += f"Explanation: {instance['explanation']}\n\n"
 
