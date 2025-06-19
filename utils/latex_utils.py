@@ -1,54 +1,45 @@
-import os
-import subprocess
+from pylatex import Document, Section, Enumerate, NoEscape, Math, Command
+from pylatex.utils import escape_latex as pylatex_escape
 from io import BytesIO
 
 def escape_latex(text):
+    """
+    Basic LaTeX escape for PyLaTeX compatibility.
+    """
     if not isinstance(text, str):
         return text
-    replacements = {
-        "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
-        "_": r"\_", "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}",
-        "^": r"\^{}", "\\": r"\textbackslash{}"
-    }
-    for original, escaped in replacements.items():
-        text = text.replace(original, escaped)
-    return text
+    # You can use pylatex.utils.escape_latex or keep your own
+    return pylatex_escape(text)
 
-def build_latex_content(questions):
-    entries = []
-    for i, q in enumerate(questions):
-        try:
-            text = escape_latex(q["question_template"])  # updated from 'question_text'
-        except KeyError:
-            print(f"⚠️ Skipping question {i}: missing 'question_template'")
-            continue
+def build_pdf(questions):
+    geometry_options = {"margin": "1in"}
+    doc = Document(geometry_options=geometry_options)
+    doc.preamble.append(Command('title', 'Physics Worksheet'))
+    doc.preamble.append(Command('date', NoEscape(r'\today')))
+    doc.append(NoEscape(r'\maketitle'))
 
-        hint = escape_latex(q.get("hint", ""))
-        explanation = escape_latex(q.get("explanation", ""))
-        eq = q.get("latex_eq", "")
+    with doc.create(Section('Questions')):
+        with doc.create(Enumerate()) as enum:
+            for q in questions:
+                text = escape_latex(q.get("question_template", ""))
+                hint = escape_latex(q.get("hint", ""))
+                explanation = escape_latex(q.get("explanation", ""))
+                latex_eq = q.get("latex_eq", "")
 
-        block = f"\\item {text}\n"
-        if eq:
-            block += f"\\[\n{eq}\n\\]\n"
-        if hint:
-            block += f"\\textbf{{Hint:}} {hint} \\\\\n"
-        if explanation:
-            block += f"\\textbf{{Explanation:}} {explanation}\n"
+                enum.add_item(text)
 
-        entries.append(block)
+                if latex_eq:
+                    enum.append(Math(data=[NoEscape(latex_eq)]))
 
-    return "\n\n".join(entries)
+                if hint:
+                    enum.append(NoEscape(r'\textbf{Hint:} ' + hint + r'\\'))
 
-def compile_pdf_from_latex(template_path, latex_content):
-    with open(template_path, "r") as f:
-        template = f.read()
+                if explanation:
+                    enum.append(NoEscape(r'\textbf{Explanation:} ' + explanation))
 
-    filled = template.replace("%__QUESTIONS__", latex_content)
+    # Create PDF in-memory
+    pdf_bytes = BytesIO()
+    doc.generate_pdf(pdf_bytes, clean_tex=True)
+    pdf_bytes.seek(0)
+    return pdf_bytes
 
-    with open("worksheet.tex", "w") as f:
-        f.write(filled)
-
-    subprocess.run(["pdflatex", "-interaction=nonstopmode", "worksheet.tex"], check=True)
-
-    with open("worksheet.pdf", "rb") as f:
-        return BytesIO(f.read())
