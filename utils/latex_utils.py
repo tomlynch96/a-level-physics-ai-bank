@@ -7,7 +7,7 @@ from reportlab.lib.colors import black, HexColor
 from io import BytesIO
 import html
 
-def build_pdf_reportlab(questions):
+def build_pdf_reportlab(questions, title="A Level Physics Worksheet"):
     buffer = BytesIO()
     doc = SimpleDocTemplate(
         buffer,
