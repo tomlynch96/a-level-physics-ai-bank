@@ -106,7 +106,7 @@ else:
 
 if st.button("Download PDF (PyLaTeX)"):
     with st.spinner("Generating PDF..."):
-        pdf_file = build_pdf(sample_questions)
+        pdf_file = build_pdf(final_sample)
     st.download_button(
         label="Download PDF",
         data=pdf_file,
