@@ -104,15 +104,25 @@ else:
 
     # pdf_file = generate_pdf(worksheet_text)
 
+# if st.button("Download PDF (PyLaTeX)"):
+#     with st.spinner("Generating PDF..."):
+#         pdf_file = build_pdf(final_sample)
+#     st.download_button(
+#         label="Download PDF",
+#         data=pdf_file,
+#         file_name="worksheet.pdf",
+#         mime="application/pdf"
+#     )
+
 if st.button("Download PDF (PyLaTeX)"):
     with st.spinner("Generating PDF..."):
-        pdf_file = build_pdf(final_sample)
+        pdf_file = build_pdf(final_sample)  # sample is your questions list
+
     st.download_button(
         label="Download PDF",
         data=pdf_file,
         file_name="worksheet.pdf",
         mime="application/pdf"
     )
-
 
 
