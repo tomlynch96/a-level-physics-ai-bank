@@ -5,7 +5,7 @@ from utils.worksheet_builder import build_question_instance, get_linked_mcq
 from io import BytesIO
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
-from utils.latex_utils import build_pdf
+from utils.pdf_builder import build_pdf_reportlab
 
 def generate_pdf(worksheet_text):
     buffer = BytesIO()
@@ -114,13 +114,13 @@ else:
 #         mime="application/pdf"
 #     )
 
-if st.button("Download PDF (PyLaTeX)"):
+if st.button("Download PDF (ReportLab)"):
     with st.spinner("Generating PDF..."):
-        pdf_file = build_pdf(final_sample)  # sample is your questions list
+        pdf_bytes = build_pdf_reportlab(sample)  # replace sample with your question list
 
     st.download_button(
         label="Download PDF",
-        data=pdf_file,
+        data=pdf_bytes,
         file_name="worksheet.pdf",
         mime="application/pdf"
     )
