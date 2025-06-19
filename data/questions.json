@@ -1,1 +1,20 @@
+[
+  {
+    "id": "photo_001",
+    "topic": "Photoelectric Effect",
+    "difficulty": "Medium",
+    "question_template": "Why does a photocell produce a current under UV light but not under visible light?",
+    "latex_eq": "",
+    "variables": {},
+    "answer": "Photons in UV light have more energy than the work function of the metal; visible light photons do not.",
+    "hint": "Consider photon energy in UV vs visible light.",
+    "explanation": "UV light has shorter wavelengths and higher energy per photon. Only light with photon energy greater than the metal’s work function causes electron emission.",
+    "mcq": {
+      "question": "A photocell produces current under yellow light. Which other colour of light is also likely to produce a current?",
+      "options": ["Red", "Orange", "Blue", "Infrared"],
+      "correct": "Blue",
+      "explanation": "Blue light has a shorter wavelength and higher photon energy than yellow, making it more likely to emit electrons."
+    }
+  }
+]
 []
