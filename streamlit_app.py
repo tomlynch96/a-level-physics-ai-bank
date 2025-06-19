@@ -35,6 +35,7 @@ selected_topic = st.selectbox("Choose topic:", topics)
 difficulty = st.selectbox("Overall worksheet difficulty:", ["Easy", "Medium", "Hard"])
 worksheet_type = st.radio("Worksheet type:", ["Free Response", "MCQ Follow-up", "Both"])
 num_questions = st.slider("Number of questions", 1, 10, 3)
+title = st.text_input("Enter the worksheet title", value="A Level Physics Worksheet")
 
 # Difficulty mix based on overall level
 difficulty_mix = {
@@ -103,20 +104,16 @@ else:
             worksheet_text += f"Explanation: {mcq['explanation']}\n\n"
 
 # generate pdf
-filename = st.text_input("Enter filename for your worksheet", value="worksheet")
-
 if st.button("Generate PDF"):
     with st.spinner("Generating PDF..."):
-        pdf_bytes = build_pdf_reportlab(final_sample)  # your questions list
-    
-    # Ensure filename ends with .pdf
-    if not filename.lower().endswith(".pdf"):
-        filename += ".pdf"
+        pdf_bytes = build_pdf_reportlab(final_sample, title=title)
 
+    # download button here...
     st.download_button(
         label="Download PDF",
         data=pdf_bytes,
         file_name=filename,
         mime="application/pdf"
+    
     )
 
