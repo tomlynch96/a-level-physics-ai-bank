@@ -6,6 +6,7 @@ from io import BytesIO
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from utils.latex_utils import build_latex_content, compile_pdf_from_latex
+from utils.latex_utils import build_pdf
 
 def generate_pdf(worksheet_text):
     buffer = BytesIO()
@@ -104,11 +105,9 @@ else:
 
     # pdf_file = generate_pdf(worksheet_text)
 
-if st.button("Download LaTeX PDF"):
+if st.button("Download PDF (PyLaTeX)"):
     with st.spinner("Generating PDF..."):
-        latex_body = build_latex_content(final_sample)
-        pdf_file = compile_pdf_from_latex("templates/worksheet_template.tex", latex_body)
-
+        pdf_file = build_pdf(sample_questions)
     st.download_button(
         label="Download PDF",
         data=pdf_file,
