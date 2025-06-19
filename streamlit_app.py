@@ -1,4 +1,4 @@
-_import streamlit as st
+__import streamlit as st
 import json
 import random
 from utils.worksheet_builder import build_question_instance, get_linked_mcq
@@ -106,7 +106,7 @@ else:
 # generate pdf
 if st.button("Generate PDF"):
     with st.spinner("Generating PDF..."):
-        pdf_bytes = build_pdf_reportlab(final_sample, title=title)
+        pdf_bytes = build_pdf_reportlab(final_sample, title=user_title)
 
     # download button here...
     st.download_button(
