@@ -1,4 +1,4 @@
-__import streamlit as st
+import streamlit as st
 import json
 import random
 from utils.worksheet_builder import build_question_instance, get_linked_mcq
