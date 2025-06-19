@@ -112,7 +112,7 @@ if st.button("Generate PDF"):
     st.download_button(
         label="Download PDF",
         data=pdf_bytes,
-        file_name=filename,
+        file_name=user_title,
         mime="application/pdf"
     
     )
