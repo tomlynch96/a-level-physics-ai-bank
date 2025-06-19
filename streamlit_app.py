@@ -1,4 +1,4 @@
-import streamlit as st
+_import streamlit as st
 import json
 import random
 from utils.worksheet_builder import build_question_instance, get_linked_mcq
@@ -35,7 +35,7 @@ selected_topic = st.selectbox("Choose topic:", topics)
 difficulty = st.selectbox("Overall worksheet difficulty:", ["Easy", "Medium", "Hard"])
 worksheet_type = st.radio("Worksheet type:", ["Free Response", "MCQ Follow-up", "Both"])
 num_questions = st.slider("Number of questions", 1, 10, 3)
-title = st.text_input("Enter the worksheet title", value="A Level Physics Worksheet")
+user_title = st.text_input("Enter the worksheet title", value="A Level Physics Worksheet")
 
 # Difficulty mix based on overall level
 difficulty_mix = {
